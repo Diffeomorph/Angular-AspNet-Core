@@ -14,12 +14,10 @@ export class AppService {
     constructor(private _http: Http) { }
 
     findJSON(): Observable<any> {
-        return this._http.get("assets/items.json")
-                            .map((response: Response) => {
-                                return response.json();
-                                        }
-                                    )
-                                }
+        return this._http.get('assets/items.json').map((response: Response) => {
+            return response.json();
+        });
+    }
 
     sayHello(): Observable<any> {
         return this._http.get(this.greetUrl).map((response: Response) => {

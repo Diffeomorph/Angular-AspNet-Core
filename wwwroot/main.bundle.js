@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html lang=\"en\">\n  <link rel=\"stylesheet\" href=\"https://bootswatch.com/cerulean/bootstrap.min.css\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Yik-Yak Clone</title>\n  </head>\n  <body>\n    <div class=\"navbar navbar-default navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <a href=\"../\" class=\"navbar-brand\">Yik-Yak Clone</a>\n        </div>\n      </div>      \n    </div>\n\n      <!-- Containers\n      ================================================== -->\n      <div class = \"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-12\">\n            <div class=\"bs-component\">\n              <div class=\"jumbotron\">\n                <h1>Jumbotron</h1>\n              </div>\n            </div>\n          </div>\n        </div> \n      </div>\n\n      <!-- Containers\n      ================================================== -->\n      <div class = \"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-12\">\n            <div class=\"bs-component\">\n              <div class=\"jumbotron\">\n                <h1>Jumbotron</h1>\n              </div>\n            </div>\n          </div>\n        </div> \n      </div>\n\n          <!-- \n      ================================================== -->\n      <div class = \"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-12\">\n            <div class=\"bs-component\">\n              <div class=\"jumbotron\">\n                <h1>Jumbotron</h1>\n              </div>\n            </div>\n          </div>\n        </div> \n      </div> \n\n    \n  <nav class=\"navbar navbar-default navbar-fixed-bottom\">\n    <div class=\"container\">\n      <div class=\"navbar-head\">\n        <div class = \"col-sm-3\"></div>\n        <div class=\"col-sm-6\">\n          <div class=\"form-group\">\n            <input class=\"form-control input-lg\" type=\"text\" id=\"inputLarge\">\n          </div>\n        </div>\n        <div class = \"navbar-brand\">\n          <div class=\"col-sm-2\">\n            <div class=\"form-group\">\n              <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n            </div>\n          </div>\n        </div>\n        <div class = \"col-sm-1\"></div>\n      </div>\n    </div>\n  </nav>\n\n  </body>\n</html>\n\n\n\n"
+module.exports = "<html lang=\"en\">\n  <link rel=\"stylesheet\" href=\"https://bootswatch.com/cerulean/bootstrap.min.css\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Yik-Yak Clone</title>\n  </head>\n  <body>\n    <div class=\"navbar navbar-default navbar-fixed-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <a href=\"../\" class=\"navbar-brand\">Yik-Yak Clone</a>\n        </div>\n      </div>      \n    </div>\n\n    <div class =\"container\" *ngFor=\"let item of itemsjson?.results\">\n      <div class=\"row\">\n          <div class=\"col-lg-12\">\n              <div class=\"bs-component\">\n                  <div class=\"jumbotron\">\n                      <h1>{{item}}</h1>\n                  </div>\n              </div>\n          </div>\n      </div> \n    </div>\n\n     \n  <nav class=\"navbar navbar-default navbar-fixed-bottom\">\n    <div class=\"container\">\n      <div class=\"navbar-head\">\n        <div class = \"col-sm-3\"></div>\n        <div class=\"col-sm-6\">\n          <div class=\"form-group\">\n            <input class=\"form-control input-lg\" type=\"text\" id=\"inputLarge\">\n          </div>\n        </div>\n        <div class = \"navbar-brand\">\n          <div class=\"col-sm-2\">\n            <div class=\"form-group\">\n              <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n            </div>\n          </div>\n        </div>\n        <div class = \"col-sm-1\"></div>\n      </div>\n    </div>\n  </nav>\n\n  </body>\n</html>\n\n\n\n"
 
 /***/ }),
 
@@ -69,7 +69,7 @@ var AppComponent = (function () {
         var _this = this;
         this._appService.findJSON()
             .subscribe(function (result) {
-            _this.greetings = result;
+            _this.itemsjson = result;
         });
     };
     return AppComponent;
@@ -164,8 +164,7 @@ var AppService = (function () {
         this.greetUrl = 'api/Hello';
     }
     AppService.prototype.findJSON = function () {
-        return this._http.get("assets/items.json")
-            .map(function (response) {
+        return this._http.get('assets/items.json').map(function (response) {
             return response.json();
         });
     };
