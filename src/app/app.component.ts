@@ -15,12 +15,11 @@ export class AppComponent implements OnInit {
   constructor(private _appService: AppService) { }
 
   ngOnInit(): void {
-    this._appService.findJSON()
-      .subscribe(
-      result => {
-        this.itemsjson = result;
-      }
-      );
+    this._appService.findJSON().subscribe(result => { 
+        this.itemsjson = result; 
+    }, 
+        err => { console.log(err);}   
+    );
   }
 }
 
