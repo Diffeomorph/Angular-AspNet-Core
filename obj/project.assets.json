@@ -9629,11 +9629,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\hello-world\\hello-world.csproj",
+      "projectUniqueName": "c:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\HelloWorld\\hello-world.csproj",
       "projectName": "hello-world",
-      "projectPath": "C:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\hello-world\\hello-world.csproj",
+      "projectPath": "c:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\HelloWorld\\hello-world.csproj",
       "packagesPath": "C:\\Users\\gf1721\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\hello-world\\obj\\",
+      "outputPath": "c:\\Users\\gf1721\\Documents\\Projects\\viscodeangular\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gf1721\\AppData\\Roaming\\NuGet\\NuGet.Config",

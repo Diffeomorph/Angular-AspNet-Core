@@ -1,10 +1,10 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace hello_world
+namespace HelloWorld
 {
     [Route("api/[Controller]")]
-    public class HelloController : Controller
+    public class ValuesController : Controller
     {
         [HttpGet]
         public IActionResult Greetings() {
