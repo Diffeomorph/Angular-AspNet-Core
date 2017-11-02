@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class =\"container\" *ngFor=\"let item of itemsjson?.results\">\n  <div class=\"row\">\n    <div class=\"col-lg-12\">\n      <div class=\"bs-component\">\n        <div class=\"jumbotron\">\n          <h1>{{item}}</h1>\n        </div>\n      </div>\n    </div>\n  </div> \n</div>"
+module.exports = "<div class =\"container\" *ngFor=\"let item of itemsjson\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <div class=\"bs-component\">\r\n        <div class=\"jumbotron\">\r\n          <h1>{{item.name}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n</div>"
 
 /***/ }),
 
@@ -163,7 +163,7 @@ var AppService = (function () {
         this.greetUrl = 'api/Hello';
     }
     AppService.prototype.findJSON = function () {
-        return this._http.get('/assets/items.json').map(function (response) {
+        return this._http.get('/api/todo').map(function (response) {
             return response.json();
         });
     };

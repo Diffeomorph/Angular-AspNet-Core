@@ -14,7 +14,7 @@ export class AppService {
     constructor(private _http: Http) { }
 
     findJSON(): Observable<any> {
-        return this._http.get('/assets/items.json').map((response: Response) => {
+        return this._http.get('/api/todo').map((response: Response) => {
             return response.json();
         });
     }
