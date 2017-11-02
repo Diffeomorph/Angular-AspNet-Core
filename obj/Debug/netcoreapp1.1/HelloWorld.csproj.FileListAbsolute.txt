@@ -3,3 +3,7 @@ C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\bin\Debug\netcoreap
 C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\bin\Debug\netcoreapp1.1\HelloWorld.runtimeconfig.dev.json
 C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\obj\Debug\netcoreapp1.1\HelloWorld.csproj.CoreCompileInputs.cache
 C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\obj\Debug\netcoreapp1.1\HelloWorld.AssemblyInfo.cs
+C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\bin\Debug\netcoreapp1.1\HelloWorld.dll
+C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\bin\Debug\netcoreapp1.1\HelloWorld.pdb
+C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\obj\Debug\netcoreapp1.1\HelloWorld.dll
+C:\Users\gf1721\Documents\Projects\viscodeangular\HelloWorld\obj\Debug\netcoreapp1.1\HelloWorld.pdb
