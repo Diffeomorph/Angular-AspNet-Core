@@ -11,6 +11,7 @@ import { AppService } from './app.service';
 export class AppComponent implements OnInit {
   greetings = '';
   itemsjson : string;
+  inputLarge : string;
 
   constructor(private _appService: AppService) { }
 
@@ -21,5 +22,10 @@ export class AppComponent implements OnInit {
         err => { console.log(err);}   
     );
   }
+
+submitData(): void {
+  console.log(this.inputLarge); 
+}
+
 }
 

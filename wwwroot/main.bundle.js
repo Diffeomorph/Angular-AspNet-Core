@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class =\"container\" *ngFor=\"let item of itemsjson\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <div class=\"bs-component\">\r\n        <div class=\"jumbotron\">\r\n          <h1>{{item.name}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n</div>"
+module.exports = "<div class =\"container\" *ngFor=\"let item of itemsjson\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <div class=\"bs-component\">\r\n        <div class=\"jumbotron\">\r\n          <h1>{{item.name}}</h1>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div> \r\n</div>\r\n\r\n<nav class=\"navbar navbar-default navbar-fixed-bottom\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-head\">\r\n      <div class = \"col-sm-3\"></div>\r\n        <div class=\"col-sm-6\">\r\n          <div class=\"form-group\">\r\n            <input class=\"form-control input-lg\" type=\"text\" id=\"inputLarge\" >\r\n          </div>\r\n        </div>\r\n        <div class = \"navbar-brand\">\r\n          <div class=\"col-sm-2\">\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-primary\" (click)=\"submitData()\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      <div class = \"col-sm-1\"></div>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -70,6 +70,9 @@ var AppComponent = (function () {
         this._appService.findJSON().subscribe(function (result) {
             _this.itemsjson = result;
         }, function (err) { console.log(err); });
+    };
+    AppComponent.prototype.submitData = function () {
+        console.log(this.inputLarge);
     };
     return AppComponent;
 }());
