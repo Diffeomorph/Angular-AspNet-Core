@@ -59,6 +59,7 @@ namespace HelloWorld.Controllers
             if (item == null || item.Id != id)
             {
                 return BadRequest();
+                
             }
 
             var todo = _context.TodoItems.FirstOrDefault(t => t.Id == id);

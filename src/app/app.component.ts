@@ -23,9 +23,12 @@ export class AppComponent implements OnInit {
     );
   }
 
-submitData(): void {
-  console.log(this.inputLarge); 
-}
+  submitData(textdata:string): void {
+    this._appService.sendText(textdata).subscribe(data => console.log(data));
+    console.log("sent text");
+    this.ngOnInit(); 
+    console.log("refreshed");
+  }
 
 }
 
